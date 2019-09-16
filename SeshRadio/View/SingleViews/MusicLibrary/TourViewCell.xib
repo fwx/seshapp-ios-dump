@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TourViewCell" customModule="SeshRadio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="195"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="195"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_back" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-p8-Ujr" customClass="RoundedUIImageView" customModule="SeshRadio" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="12" width="173" height="136.5"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imaginary Conversations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0u-2k-Nwm">
+                        <rect key="frame" x="8" y="164.5" width="157" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="I0u-2k-Nwm" firstAttribute="top" secondItem="ZMO-p8-Ujr" secondAttribute="bottom" constant="16" id="7v4-vb-nPN"/>
+                <constraint firstItem="ZMO-p8-Ujr" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="GkY-YY-Qn3"/>
+                <constraint firstAttribute="trailing" secondItem="I0u-2k-Nwm" secondAttribute="trailing" constant="8" id="OR2-qR-vMN"/>
+                <constraint firstItem="I0u-2k-Nwm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="lZ4-G6-BQz"/>
+                <constraint firstAttribute="trailing" secondItem="ZMO-p8-Ujr" secondAttribute="trailing" id="ovo-Fs-bWS"/>
+                <constraint firstItem="ZMO-p8-Ujr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rTw-v9-bBH"/>
+                <constraint firstItem="ZMO-p8-Ujr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="uCq-JA-xIY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="173" height="195"/>
+            <connections>
+                <outlet property="tourImage" destination="ZMO-p8-Ujr" id="7Dt-ed-1lO"/>
+                <outlet property="tourTitle" destination="I0u-2k-Nwm" id="wQF-my-THC"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="189.3553223388306"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="test_back" width="414" height="736"/>
+    </resources>
+</document>

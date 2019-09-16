@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RAK-x5-dRT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Radio View Controller-->
+        <scene sceneID="otk-vL-q2F">
+            <objects>
+                <viewController id="RAK-x5-dRT" customClass="RadioViewController" customModule="SeshRadio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QnV-89-Rwl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eth-1z-XQK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUL-hf-aWM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvG-L1-lM5" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="152" width="375" height="233.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EG6-IF-Og4">
+                                <rect key="frame" x="323" y="80" width="36" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="yyC-D4-CAD"/>
+                                </constraints>
+                                <state key="normal" image="ic_history"/>
+                                <connections>
+                                    <action selector="onHistoryPressed:" destination="RAK-x5-dRT" eventType="touchUpInside" id="EGp-FX-Ab5"/>
+                                </connections>
+                            </button>
+                            <imageView alpha="0.69999998807907104" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="ic_radio" translatesAutoresizingMaskIntoConstraints="NO" id="xfF-06-CTi">
+                                <rect key="frame" x="20" y="568" width="38" height="34"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riw-6e-8jT">
+                                <rect key="frame" x="160" y="323" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" scrollEnabled="NO" editable="NO" text="Bones" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-da-FQ4" customClass="SESHTextView" customModule="SeshRadio" customModuleProvider="target">
+                                <rect key="frame" x="8" y="464.5" width="359" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" scrollEnabled="NO" editable="NO" text="Bones" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fA-kM-RPL" customClass="SESHTextView" customModule="SeshRadio" customModuleProvider="target">
+                                <rect key="frame" x="8" y="435.5" width="359" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="eth-1z-XQK" secondAttribute="bottom" id="1WN-g1-oIg"/>
+                            <constraint firstItem="jtk-da-FQ4" firstAttribute="leading" secondItem="obN-Vr-QiX" secondAttribute="leading" constant="8" id="3Dr-E2-IDu"/>
+                            <constraint firstItem="UvG-L1-lM5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EG6-IF-Og4" secondAttribute="bottom" constant="40" id="49X-f8-ofM"/>
+                            <constraint firstItem="jtk-da-FQ4" firstAttribute="top" secondItem="2fA-kM-RPL" secondAttribute="bottom" constant="-8" id="6iE-I4-KNY"/>
+                            <constraint firstItem="iUL-hf-aWM" firstAttribute="leading" secondItem="QnV-89-Rwl" secondAttribute="leading" id="AiS-e5-zmO"/>
+                            <constraint firstItem="xfF-06-CTi" firstAttribute="top" secondItem="jtk-da-FQ4" secondAttribute="bottom" priority="750" constant="180" id="CNR-55-zNg"/>
+                            <constraint firstAttribute="trailing" secondItem="eth-1z-XQK" secondAttribute="trailing" id="EnQ-UO-aP2"/>
+                            <constraint firstItem="EG6-IF-Og4" firstAttribute="top" secondItem="obN-Vr-QiX" secondAttribute="top" constant="16" id="PdC-RX-3kL"/>
+                            <constraint firstItem="UvG-L1-lM5" firstAttribute="top" secondItem="EG6-IF-Og4" secondAttribute="bottom" priority="750" constant="20" id="WaX-lg-z0H"/>
+                            <constraint firstItem="UvG-L1-lM5" firstAttribute="leading" secondItem="QnV-89-Rwl" secondAttribute="leading" id="YL3-Fz-Xvw"/>
+                            <constraint firstItem="Riw-6e-8jT" firstAttribute="centerX" secondItem="QnV-89-Rwl" secondAttribute="centerX" id="YUa-7F-zSM"/>
+                            <constraint firstItem="eth-1z-XQK" firstAttribute="top" secondItem="QnV-89-Rwl" secondAttribute="top" id="ZsZ-V2-2yU"/>
+                            <constraint firstItem="xfF-06-CTi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jtk-da-FQ4" secondAttribute="bottom" priority="750" constant="20" id="cIz-jO-y2U"/>
+                            <constraint firstItem="iUL-hf-aWM" firstAttribute="trailing" secondItem="QnV-89-Rwl" secondAttribute="trailing" id="coU-9a-wby"/>
+                            <constraint firstItem="Riw-6e-8jT" firstAttribute="centerY" secondItem="QnV-89-Rwl" secondAttribute="centerY" id="dHR-iT-vZe"/>
+                            <constraint firstItem="xfF-06-CTi" firstAttribute="leading" secondItem="obN-Vr-QiX" secondAttribute="leading" constant="20" id="dZ5-jd-4yV"/>
+                            <constraint firstAttribute="trailing" secondItem="UvG-L1-lM5" secondAttribute="trailing" id="dcH-aB-VOP"/>
+                            <constraint firstItem="iUL-hf-aWM" firstAttribute="top" secondItem="QnV-89-Rwl" secondAttribute="top" id="dtU-Rt-48Y"/>
+                            <constraint firstAttribute="bottom" secondItem="iUL-hf-aWM" secondAttribute="bottom" id="f5E-X5-joY"/>
+                            <constraint firstItem="2fA-kM-RPL" firstAttribute="leading" secondItem="obN-Vr-QiX" secondAttribute="leading" constant="8" id="h3h-Ta-xWF"/>
+                            <constraint firstItem="UvG-L1-lM5" firstAttribute="height" secondItem="QnV-89-Rwl" secondAttribute="height" multiplier="0.35" id="n7f-XJ-Rvk"/>
+                            <constraint firstItem="obN-Vr-QiX" firstAttribute="bottom" secondItem="xfF-06-CTi" secondAttribute="bottom" constant="16" id="orQ-k1-aYz"/>
+                            <constraint firstItem="eth-1z-XQK" firstAttribute="leading" secondItem="QnV-89-Rwl" secondAttribute="leading" id="rRr-bQ-Ema"/>
+                            <constraint firstItem="obN-Vr-QiX" firstAttribute="trailing" secondItem="2fA-kM-RPL" secondAttribute="trailing" constant="8" id="wa0-bj-440"/>
+                            <constraint firstItem="obN-Vr-QiX" firstAttribute="trailing" secondItem="jtk-da-FQ4" secondAttribute="trailing" constant="8" id="xGM-ch-uUz"/>
+                            <constraint firstItem="obN-Vr-QiX" firstAttribute="trailing" secondItem="EG6-IF-Og4" secondAttribute="trailing" constant="16" id="yG3-Vr-dkc"/>
+                            <constraint firstItem="2fA-kM-RPL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UvG-L1-lM5" secondAttribute="bottom" constant="50" id="yQ5-14-C9V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="obN-Vr-QiX"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bgView" destination="eth-1z-XQK" id="SaU-hX-i9z"/>
+                        <outlet property="descView" destination="jtk-da-FQ4" id="5xI-px-J2d"/>
+                        <outlet property="loadingView" destination="Riw-6e-8jT" id="sUc-8u-7I1"/>
+                        <outlet property="overlayView" destination="iUL-hf-aWM" id="ebW-Kw-cdR"/>
+                        <outlet property="radioState" destination="xfF-06-CTi" id="kIU-Zp-jcd"/>
+                        <outlet property="stationsView" destination="UvG-L1-lM5" id="lyW-de-2Cp"/>
+                        <outlet property="titleView" destination="2fA-kM-RPL" id="pCM-F2-xgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9k-Pa-IBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="549.60000000000002" y="-193.85307346326837"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_history" width="36" height="32"/>
+        <image name="ic_radio" width="38" height="34"/>
+    </resources>
+</document>

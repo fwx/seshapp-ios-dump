@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mzb-42-1iX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News View Controller-->
+        <scene sceneID="f72-r7-wfR">
+            <objects>
+                <collectionViewController id="mzb-42-1iX" customClass="NewsViewController" customModule="SeshRadio" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="ws0-3T-OqU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tZE-fc-fn1">
+                            <size key="itemSize" width="367" height="317"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StringCell" id="kra-Fp-WsF" customClass="FeedCategoryCell" customModule="SeshRadio" customModuleProvider="target">
+                                <rect key="frame" x="4" y="0.0" width="367" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="71"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="String" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNu-xw-X5f">
+                                            <rect key="frame" x="16" y="19.5" width="335" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="CNu-xw-X5f" firstAttribute="centerY" secondItem="kra-Fp-WsF" secondAttribute="centerY" id="dxC-M0-TeA"/>
+                                    <constraint firstItem="CNu-xw-X5f" firstAttribute="leading" secondItem="kra-Fp-WsF" secondAttribute="leadingMargin" constant="8" id="fYv-eK-vqM"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="CNu-xw-X5f" secondAttribute="trailing" constant="8" id="yrJ-p0-gIS"/>
+                                </constraints>
+                                <size key="customSize" width="367" height="71"/>
+                                <connections>
+                                    <outlet property="catLabel" destination="CNu-xw-X5f" id="iyc-Uw-3x5"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ToursCell" id="6ye-UU-qBc" customClass="FeedToursViewCell" customModule="SeshRadio" customModuleProvider="target">
+                                <rect key="frame" x="4" y="81" width="367" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="225"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="246-n5-ZOj" customClass="FSPagerView" customModule="FSPagerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="225"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="246-n5-ZOj" firstAttribute="top" secondItem="6ye-UU-qBc" secondAttribute="top" id="iWI-a3-lIH"/>
+                                    <constraint firstAttribute="bottom" secondItem="246-n5-ZOj" secondAttribute="bottom" id="ib2-Bi-akP"/>
+                                    <constraint firstItem="246-n5-ZOj" firstAttribute="leading" secondItem="6ye-UU-qBc" secondAttribute="leading" id="jaa-De-JHq"/>
+                                    <constraint firstAttribute="trailing" secondItem="246-n5-ZOj" secondAttribute="trailing" id="lel-JP-g8h"/>
+                                </constraints>
+                                <size key="customSize" width="367" height="225"/>
+                                <connections>
+                                    <outlet property="pagerView" destination="246-n5-ZOj" id="iBu-M8-JZx"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="bLp-YF-Sqt" customClass="NewsViewCell" customModule="SeshRadio" customModuleProvider="target">
+                                <rect key="frame" x="4" y="316" width="367" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="317"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsJ-SD-JIV" customClass="CRView" customModule="SeshRadio" customModuleProvider="target">
+                                            <rect key="frame" x="16" y="36" width="335" height="265"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IRU-lj-gdW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="265"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-xb-Oem">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="265"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_news_live" translatesAutoresizingMaskIntoConstraints="NO" id="6VG-vt-jx0">
+                                                    <rect key="frame" x="273" y="8" width="58" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="SKE-UM-dco"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="02 Feb '18 at 13:37" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMT-0Q-NLR">
+                                                    <rect key="frame" x="8" y="8" width="257" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curtis Horton New MerchCurtis Horton New MerchCurtis Horton New Merch" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="0aO-J4-kvc">
+                                                    <rect key="frame" x="8" y="82.5" width="179.5" height="100.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check this out. New merch by CurtisCheck this out. New merch by CurtisCheck this out. New merch by Curtis" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q8k-aO-hAV">
+                                                    <rect key="frame" x="8" y="196" width="319" height="61"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                    <color key="textColor" red="0.76470588240000004" green="0.76470588240000004" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="q8k-aO-hAV" secondAttribute="trailing" constant="8" id="15A-sA-LGV"/>
+                                                <constraint firstItem="YMT-0Q-NLR" firstAttribute="leading" secondItem="XsJ-SD-JIV" secondAttribute="leading" constant="8" id="2jZ-Ku-dUH"/>
+                                                <constraint firstItem="IRU-lj-gdW" firstAttribute="top" secondItem="XsJ-SD-JIV" secondAttribute="top" id="4s9-Vu-6zP"/>
+                                                <constraint firstItem="q8k-aO-hAV" firstAttribute="leading" secondItem="XsJ-SD-JIV" secondAttribute="leading" constant="8" id="6Sz-3m-sus"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kin-xb-Oem" secondAttribute="trailing" id="8wi-d6-qWo"/>
+                                                <constraint firstItem="IRU-lj-gdW" firstAttribute="leading" secondItem="XsJ-SD-JIV" secondAttribute="leading" id="9wR-4U-9SE"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kin-xb-Oem" secondAttribute="bottom" id="Atm-xU-9M3"/>
+                                                <constraint firstItem="YMT-0Q-NLR" firstAttribute="top" secondItem="XsJ-SD-JIV" secondAttribute="top" constant="8" id="LVs-Qj-o6V"/>
+                                                <constraint firstAttribute="trailing" secondItem="IRU-lj-gdW" secondAttribute="trailing" id="LgD-bJ-TRd"/>
+                                                <constraint firstItem="Kin-xb-Oem" firstAttribute="top" secondItem="XsJ-SD-JIV" secondAttribute="top" id="LsN-8Q-sby"/>
+                                                <constraint firstItem="6VG-vt-jx0" firstAttribute="leading" secondItem="YMT-0Q-NLR" secondAttribute="trailing" constant="8" id="PXs-VL-fBG"/>
+                                                <constraint firstAttribute="bottom" secondItem="IRU-lj-gdW" secondAttribute="bottom" id="Pwt-Nx-zrg"/>
+                                                <constraint firstAttribute="trailing" secondItem="6VG-vt-jx0" secondAttribute="trailing" constant="4" id="Uw4-JN-fk1"/>
+                                                <constraint firstItem="0aO-J4-kvc" firstAttribute="leading" secondItem="XsJ-SD-JIV" secondAttribute="leading" constant="8" id="aGs-6f-5hv"/>
+                                                <constraint firstItem="6VG-vt-jx0" firstAttribute="top" secondItem="XsJ-SD-JIV" secondAttribute="top" constant="8" id="auY-6h-h6I"/>
+                                                <constraint firstAttribute="bottom" secondItem="q8k-aO-hAV" secondAttribute="bottom" constant="8" id="h5L-JD-CAQ"/>
+                                                <constraint firstItem="Kin-xb-Oem" firstAttribute="leading" secondItem="XsJ-SD-JIV" secondAttribute="leading" id="qZt-cb-SVW"/>
+                                                <constraint firstAttribute="centerX" secondItem="0aO-J4-kvc" secondAttribute="trailing" constant="-20" id="qlT-d1-0AX"/>
+                                                <constraint firstItem="0aO-J4-kvc" firstAttribute="centerY" secondItem="XsJ-SD-JIV" secondAttribute="centerY" id="r62-N7-RAu"/>
+                                                <constraint firstItem="q8k-aO-hAV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0aO-J4-kvc" secondAttribute="bottom" constant="8" id="y0T-xt-lYb"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XsJ-SD-JIV" firstAttribute="leading" secondItem="bLp-YF-Sqt" secondAttribute="leadingMargin" constant="8" id="NEX-hJ-8zQ"/>
+                                    <constraint firstItem="XsJ-SD-JIV" firstAttribute="trailing" secondItem="bLp-YF-Sqt" secondAttribute="trailingMargin" constant="-8" id="XY8-Cs-G3I"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="XsJ-SD-JIV" secondAttribute="bottom" constant="8" id="afQ-NB-Fsa"/>
+                                    <constraint firstItem="XsJ-SD-JIV" firstAttribute="top" secondItem="bLp-YF-Sqt" secondAttribute="topMargin" constant="8" id="kV6-nO-gwd"/>
+                                </constraints>
+                                <size key="customSize" width="367" height="317"/>
+                                <connections>
+                                    <outlet property="holderView" destination="XsJ-SD-JIV" id="cwH-9j-mm2"/>
+                                    <outlet property="icon" destination="6VG-vt-jx0" id="YcO-Cv-Auv"/>
+                                    <outlet property="newsDate" destination="YMT-0Q-NLR" id="EER-GL-5cI"/>
+                                    <outlet property="newsDesc" destination="q8k-aO-hAV" id="bCo-T9-4JU"/>
+                                    <outlet property="newsImage" destination="IRU-lj-gdW" id="8PJ-Fx-XBy"/>
+                                    <outlet property="newsTitle" destination="0aO-J4-kvc" id="NSm-Dq-fsm"/>
+                                    <outlet property="overlayView" destination="Kin-xb-Oem" id="f6e-sx-At3"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="mzb-42-1iX" id="XyU-zw-gcb"/>
+                            <outlet property="delegate" destination="mzb-42-1iX" id="Izo-p6-ep8"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="Q2Q-7m-ICM" kind="presentation" identifier="Stream" id="pQE-tM-rX2"/>
+                        <segue destination="FTm-eT-5Gp" kind="show" identifier="kPaidStreamSegue" id="aR5-EG-wux"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8z-f9-pnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="cVZ-ce-nPH">
+            <objects>
+                <viewController id="Q2Q-7m-ICM" customClass="StreamViewController" customModule="SeshRadio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y2Q-V4-od4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7fW-xc-dQf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yv-4i-WRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1319" y="-123"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WAJ-Av-ZhV">
+            <objects>
+                <viewController id="FTm-eT-5Gp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yMQ-Du-zqa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGO-Tu-mST">
+                                <rect key="frame" x="20" y="161" width="335" height="345"/>
+                                <string key="text">Мы никогда не возьмем ни цента с пользователей SESHapp. Поддержка прямых трансляций - это, прежде всего, серверные ресурсы, нагрузки на интернет соединения. Поэтому, мы вынуждены были сделать некоторые трансляции платными. В текущей версии приложения оплата не реализована. Пожалуйста, обновите приложение.
+
+We would never collect a single cent from SESHapp users. Supporting live streams is, first of all, server side resources, connection loads. That’s why we had to make some streams paid. In the current version of app those are not supported. Please, update the app.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BGO-Tu-mST" firstAttribute="leading" secondItem="Bxx-8T-1eX" secondAttribute="leading" constant="20" id="74U-dC-MQT"/>
+                            <constraint firstItem="BGO-Tu-mST" firstAttribute="centerY" secondItem="yMQ-Du-zqa" secondAttribute="centerY" id="8UM-xR-Z4p"/>
+                            <constraint firstAttribute="trailing" secondItem="BGO-Tu-mST" secondAttribute="trailing" constant="20" id="Iar-8s-4PV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bxx-8T-1eX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDN-7m-owq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_news_live" width="58" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShowViewCell" customModule="SeshRadio" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="651"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="651"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="512x512" translatesAutoresizingMaskIntoConstraints="NO" id="Wtn-UY-jfh" customClass="RoundedUIImageView" customModule="SeshRadio" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="423" height="651"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
+                    <view clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpj-Tp-MPG" customClass="RoundedUIView" customModule="SeshRadio" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="423" height="651"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESHOLLOWATERBOYZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cge-t8-bjb">
+                        <rect key="frame" x="20" y="310.5" width="383" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Wtn-UY-jfh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3bE-RC-0oK"/>
+                <constraint firstItem="hpj-Tp-MPG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7mY-qG-QCH"/>
+                <constraint firstItem="hpj-Tp-MPG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E8K-xy-nGa"/>
+                <constraint firstItem="Wtn-UY-jfh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MEr-Pf-GNf"/>
+                <constraint firstAttribute="trailing" secondItem="Wtn-UY-jfh" secondAttribute="trailing" id="SVU-JW-Dxb"/>
+                <constraint firstAttribute="trailing" secondItem="hpj-Tp-MPG" secondAttribute="trailing" id="Zyq-bP-LXS"/>
+                <constraint firstItem="Cge-t8-bjb" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="bZ0-ZS-PGm"/>
+                <constraint firstAttribute="bottom" secondItem="Wtn-UY-jfh" secondAttribute="bottom" id="dIL-ms-1Et"/>
+                <constraint firstAttribute="bottom" secondItem="hpj-Tp-MPG" secondAttribute="bottom" id="dMk-bm-tQh"/>
+                <constraint firstItem="Cge-t8-bjb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="iu7-50-UoR"/>
+                <constraint firstAttribute="trailing" secondItem="Cge-t8-bjb" secondAttribute="trailing" constant="20" id="kdw-LE-j38"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="423" height="651"/>
+            <connections>
+                <outlet property="showImage" destination="Wtn-UY-jfh" id="RRN-Oo-Ua0"/>
+                <outlet property="showTitle" destination="Cge-t8-bjb" id="zCv-NA-lRM"/>
+            </connections>
+            <point key="canvasLocation" x="256.80000000000001" y="259.52023988005999"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="512x512" width="512" height="512"/>
+    </resources>
+</document>
